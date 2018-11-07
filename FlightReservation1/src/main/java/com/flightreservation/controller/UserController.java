@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.flightreservation.entities.User;
-import com.flightreservation.repos.UserRepo;
+import com.flightreservation.service.UserService;
 
 @Controller
 public class UserController {
 
 	@Autowired
-	UserRepo userRepo;
+	private UserService userService;
 	
 	@RequestMapping("/index")
 	public String showRegister() {
@@ -21,7 +21,8 @@ public class UserController {
 	
 	@RequestMapping("/registerUser")
 	public String registerUser(@ModelAttribute("user") User user) {
-		userRepo.save(user);
+		userService.saveUser(user);
 		return "/login";
 	}
+	
 }

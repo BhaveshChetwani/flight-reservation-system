@@ -9,10 +9,12 @@
 <body>
 	<h2>Login :</h2>
 
-	<form action="login" method="post">
+	<form action="index" method="post">
 		<pre>
 User Name : <input type="text" value="email" />
 Password : <input type="password" value="password" />
+
+<input type="submit" value="Register" />
 </pre>
 	</form>
 </body>

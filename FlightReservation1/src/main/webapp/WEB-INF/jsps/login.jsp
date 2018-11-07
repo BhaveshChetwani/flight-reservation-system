@@ -9,7 +9,7 @@
 <body>
 	<h2>Login :</h2>
 
-	<form action="index" method="post">
+	<form action="showAllFlights" method="post">
 		<pre>
 User Name : <input type="text" value="email" />
 Password : <input type="password" value="password" />

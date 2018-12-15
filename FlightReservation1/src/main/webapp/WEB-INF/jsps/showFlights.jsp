@@ -1,5 +1,5 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/format" prefix="fmt"%>
+<%-- <%@taglib uri="http://java.sun.com/jsp/jstl/format" prefix="fmt"%> --%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -18,11 +18,11 @@
 	<input type="submit" value="Check Flights">
 	</form>
 	<table>
-		<c:forEach items="${flightList }" var="flights">
+		<c:forEach items="${flightList }" var="flight">
 			<tr>
-			<td><a href="showFlight?depCity=${flight.depCity }">${flights.depCity }</a></td>
-			<td><a href="showFlight?arrCity=${flight.arrCity }">${flights.arrCity }</a></td>
-			<td><a href="showFlight?depDate=${fn:substring(flight.dateOfDeparture, 0, 9) }">${fn:substring(flights.dateOfDeparture,0,9) }</a></td>
+			<td><a href="showFlight?depCity=${flight.depCity }">${flight.depCity }</a></td>
+			<td><a href="showFlight?arrCity=${flight.arrCity }">${flight.arrCity }</a></td>
+			<td><a href="showFlight?depDate=${fn:substring(flight.dateOfDeparture, 0, 10) }">${fn:substring(flight.dateOfDeparture,0,10) }</a></td>
 			</tr>
 		</c:forEach>
 	</table>

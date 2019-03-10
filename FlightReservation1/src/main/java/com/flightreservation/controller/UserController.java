@@ -17,27 +17,38 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-	
+
 	@RequestMapping("/index")
 	public String showRegister(@ModelAttribute("User") User user) {
 		return "register";
 	}
-	
+
 	@RequestMapping("/registerUser")
-	public String registerUser(@ModelAttribute("User") User user, @RequestParam(value="action", required=false) String action, HttpSession session) {
-		if(HelperUtil.notNull(action)) {
-			if(action.equals("bookFlight")) {
-				session.setAttribute("action", "bookFlight");
-			}
-		}
-		
+	public String registerUser(@ModelAttribute("User") User user,
+			@RequestParam(value = "action", required = false) String action, HttpSession session) {
+		//register the user in the system
 		user.setPassword(HelperUtil.getInstance().encrypt(user.getPassword()));
 		userService.saveUser(user);
-		//session.removeAttribute("user");
 		session.setAttribute("user", user);
+		
+		//check if the user arrived from showFlight page
+		String id = (String) session.getAttribute("id");
+		if (HelperUtil.notNull(action) && HelperUtil.notNull(id)) {
+			if (action.equals("bookFlight")) {
+				session.setAttribute("action", "bookFlight");
+				
+				return "forward:/bookFlight?id="+id;
+			}
+		}
 		session.removeAttribute("action");
 		session.setAttribute("action", "showAllFlights");
-		return "/login";
+		return "login";
 	}
 	
+	@RequestMapping("/login")
+	public String login(@ModelAttribute("User") User user, HttpSession httpsession) {
+		System.out.println("email"+user.getEmail());
+		return "forward:/showAllFlights";
+	}
+
 }

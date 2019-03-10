@@ -23,7 +23,7 @@
 			<td><a href="showFlight?from=${flight.depCity }">${flight.depCity }</a></td>
 			<td><a href="showFlight?to=${flight.arrCity }">${flight.arrCity }</a></td>
 			<td><a href="showFlight?depDate=${fn:substring(flight.dateOfDeparture, 0, 10) }">${fn:substring(flight.dateOfDeparture,0,10) }</a></td>
-			<td><a href="bookFlight?id=${flight.id }">Book</a></td>
+			<td><a href="showFlight?number=${flight.id }">Book</a></td>
 			</tr>
 		</c:forEach>
 	</table>

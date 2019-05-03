@@ -5,9 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.flightreservation</groupId>
-	<artifactId>FlightReservation1</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+<!-- 	<artifactId>FlightReservation1</artifactId> -->
+	<artifactId>flight</artifactId>
+	<!-- <version>0.0.1-SNAPSHOT</version> -->
+	<packaging>war</packaging>
 
 	<name>FlightReservation1</name>
 	<description>Flight Reservation Project</description>
@@ -29,12 +30,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<!-- <exclusions>hibernate-jpa-2.1-api</exclusions> -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>		
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -45,22 +51,27 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.api/gax -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.google.api</groupId>
 			<artifactId>gax</artifactId>
 			<version>0.0.6</version>
-		</dependency>
+		</dependency> -->
 
+		<!-- To Avoid entityManager -->
+		<dependency>
+       		<groupId>javax.xml.bind</groupId>
+	        <artifactId>jaxb-api</artifactId>
+	        </dependency>
 	</dependencies>
 
 	<build>
@@ -68,6 +79,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<!-- <fileNameMapping>no-version</fileNameMapping> -->
+<!-- 					<outputFileNameMapping>@{artifactId}@@{dashClassifier?}@.@{extension}@</outputFileNameMapping> -->
+					<outputFileNameMapping>@{artifactId}@</outputFileNameMapping>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,117 +1,34 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="create_run_jar" name="Create Runnable Jar for Project FlightReservation1 with Jar-in-Jar Loader">
-    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
-    <!--ANT 1.7 is required-->
-    <!--define folder properties-->
-    <property name="dir.buildfile" value="."/>
-    <property name="dir.workspace" value="${dir.buildfile}/.."/>
-    <property name="dir.jarfile" value="${dir.buildfile}/deploy"/>
-    <target name="create_run_jar">
-        <jar destfile="${dir.jarfile}/FlightReservation.jar">
-            <manifest>
-                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
-                <attribute name="Rsrc-Main-Class" value="com.flightreservation.TestMain"/>
-                <attribute name="Class-Path" value="."/>
-                <attribute name="Rsrc-Class-Path" value="./ spring-boot-starter-data-jpa-2.0.3.RELEASE.jar spring-boot-starter-2.0.3.RELEASE.jar spring-boot-2.0.3.RELEASE.jar spring-boot-autoconfigure-2.0.3.RELEASE.jar spring-boot-starter-logging-2.0.3.RELEASE.jar logback-classic-1.2.3.jar logback-core-1.2.3.jar log4j-to-slf4j-2.10.0.jar log4j-api-2.10.0.jar jul-to-slf4j-1.7.25.jar javax.annotation-api-1.3.2.jar snakeyaml-1.19.jar spring-boot-starter-aop-2.0.3.RELEASE.jar spring-aop-5.0.7.RELEASE.jar aspectjweaver-1.8.13.jar spring-boot-starter-jdbc-2.0.3.RELEASE.jar HikariCP-2.7.9.jar spring-jdbc-5.0.7.RELEASE.jar hibernate-core-5.2.17.Final.jar jboss-logging-3.3.2.Final.jar hibernate-jpa-2.1-api-1.0.2.Final.jar javassist-3.22.0-GA.jar antlr-2.7.7.jar jandex-2.0.3.Final.jar classmate-1.3.4.jar dom4j-1.6.1.jar hibernate-commons-annotations-5.0.1.Final.jar javax.transaction-api-1.2.jar spring-data-jpa-2.0.8.RELEASE.jar spring-data-commons-2.0.8.RELEASE.jar spring-orm-5.0.7.RELEASE.jar spring-context-5.0.7.RELEASE.jar spring-tx-5.0.7.RELEASE.jar spring-beans-5.0.7.RELEASE.jar slf4j-api-1.7.25.jar spring-aspects-5.0.7.RELEASE.jar spring-boot-starter-web-2.0.3.RELEASE.jar spring-boot-starter-json-2.0.3.RELEASE.jar jackson-databind-2.9.6.jar jackson-annotations-2.9.0.jar jackson-core-2.9.6.jar jackson-datatype-jdk8-2.9.6.jar jackson-datatype-jsr310-2.9.6.jar jackson-module-parameter-names-2.9.6.jar spring-boot-starter-tomcat-2.0.3.RELEASE.jar tomcat-embed-websocket-8.5.31.jar hibernate-validator-6.0.10.Final.jar validation-api-2.0.1.Final.jar spring-web-5.0.7.RELEASE.jar spring-webmvc-5.0.7.RELEASE.jar spring-expression-5.0.7.RELEASE.jar mysql-connector-java-5.1.46.jar spring-core-5.0.7.RELEASE.jar spring-jcl-5.0.7.RELEASE.jar tomcat-embed-jasper-8.5.31.jar tomcat-embed-core-8.5.31.jar tomcat-annotations-api-8.5.31.jar tomcat-embed-el-8.5.31.jar ecj-3.12.3.jar jstl-1.2.jar gax-0.0.6.jar auto-value-1.1.jar guava-18.0.jar joda-time-2.9.9.jar grpc-all-0.9.0.jar grpc-protobuf-0.9.0.jar protobuf-java-3.0.0-beta-1.jar grpc-netty-0.9.0.jar netty-codec-http2-4.1.25.Final.jar netty-codec-http-4.1.25.Final.jar netty-codec-4.1.25.Final.jar netty-handler-4.1.25.Final.jar netty-buffer-4.1.25.Final.jar netty-common-4.1.25.Final.jar netty-transport-4.1.25.Final.jar netty-resolver-4.1.25.Final.jar hpack-0.10.1.jar grpc-auth-0.9.0.jar google-auth-library-oauth2-http-0.3.0.jar google-auth-library-credentials-0.3.0.jar google-http-client-1.19.0.jar httpclient-4.5.5.jar httpcore-4.4.9.jar commons-codec-1.11.jar google-http-client-jackson2-1.19.0.jar grpc-core-0.9.0.jar grpc-okhttp-0.9.0.jar okhttp-2.4.0.jar okio-1.4.0.jar grpc-stub-0.9.0.jar grpc-protobuf-nano-0.9.0.jar protobuf-javanano-3.0.0-alpha-4.jar guice-4.0.jar javax.inject-1.jar aopalliance-1.0.jar jsr305-3.0.0.jar"/>
-            </manifest>
-            <zipfileset src="jar-in-jar-loader.zip"/>
-            <fileset dir="${dir.buildfile}/target/classes"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.0.3.RELEASE" includes="spring-boot-starter-data-jpa-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE" includes="spring-boot-starter-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot/2.0.3.RELEASE" includes="spring-boot-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE" includes="spring-boot-autoconfigure-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.3.RELEASE" includes="spring-boot-starter-logging-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/ch/qos/logback/logback-classic/1.2.3" includes="logback-classic-1.2.3.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/ch/qos/logback/logback-core/1.2.3" includes="logback-core-1.2.3.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0" includes="log4j-to-slf4j-2.10.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0" includes="log4j-api-2.10.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25" includes="jul-to-slf4j-1.7.25.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/javax/annotation/javax.annotation-api/1.3.2" includes="javax.annotation-api-1.3.2.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/yaml/snakeyaml/1.19" includes="snakeyaml-1.19.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.0.3.RELEASE" includes="spring-boot-starter-aop-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-aop/5.0.7.RELEASE" includes="spring-aop-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/aspectj/aspectjweaver/1.8.13" includes="aspectjweaver-1.8.13.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.0.3.RELEASE" includes="spring-boot-starter-jdbc-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/zaxxer/HikariCP/2.7.9" includes="HikariCP-2.7.9.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-jdbc/5.0.7.RELEASE" includes="spring-jdbc-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/hibernate/hibernate-core/5.2.17.Final" includes="hibernate-core-5.2.17.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final" includes="jboss-logging-3.3.2.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final" includes="hibernate-jpa-2.1-api-1.0.2.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/javassist/javassist/3.22.0-GA" includes="javassist-3.22.0-GA.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/antlr/antlr/2.7.7" includes="antlr-2.7.7.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/jboss/jandex/2.0.3.Final" includes="jandex-2.0.3.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/fasterxml/classmate/1.3.4" includes="classmate-1.3.4.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/dom4j/dom4j/1.6.1" includes="dom4j-1.6.1.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final" includes="hibernate-commons-annotations-5.0.1.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/javax/transaction/javax.transaction-api/1.2" includes="javax.transaction-api-1.2.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/data/spring-data-jpa/2.0.8.RELEASE" includes="spring-data-jpa-2.0.8.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/data/spring-data-commons/2.0.8.RELEASE" includes="spring-data-commons-2.0.8.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-orm/5.0.7.RELEASE" includes="spring-orm-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-context/5.0.7.RELEASE" includes="spring-context-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-tx/5.0.7.RELEASE" includes="spring-tx-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-beans/5.0.7.RELEASE" includes="spring-beans-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/slf4j/slf4j-api/1.7.25" includes="slf4j-api-1.7.25.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-aspects/5.0.7.RELEASE" includes="spring-aspects-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE" includes="spring-boot-starter-web-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE" includes="spring-boot-starter-json-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.6" includes="jackson-databind-2.9.6.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0" includes="jackson-annotations-2.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.6" includes="jackson-core-2.9.6.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6" includes="jackson-datatype-jdk8-2.9.6.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6" includes="jackson-datatype-jsr310-2.9.6.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.6" includes="jackson-module-parameter-names-2.9.6.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE" includes="spring-boot-starter-tomcat-2.0.3.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31" includes="tomcat-embed-websocket-8.5.31.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.10.Final" includes="hibernate-validator-6.0.10.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/javax/validation/validation-api/2.0.1.Final" includes="validation-api-2.0.1.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE" includes="spring-web-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-webmvc/5.0.7.RELEASE" includes="spring-webmvc-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-expression/5.0.7.RELEASE" includes="spring-expression-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/mysql/mysql-connector-java/5.1.46" includes="mysql-connector-java-5.1.46.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-core/5.0.7.RELEASE" includes="spring-core-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/springframework/spring-jcl/5.0.7.RELEASE" includes="spring-jcl-5.0.7.RELEASE.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/8.5.31" includes="tomcat-embed-jasper-8.5.31.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31" includes="tomcat-embed-core-8.5.31.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/tomcat/tomcat-annotations-api/8.5.31" includes="tomcat-annotations-api-8.5.31.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31" includes="tomcat-embed-el-8.5.31.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/eclipse/jdt/ecj/3.12.3" includes="ecj-3.12.3.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/javax/servlet/jstl/1.2" includes="jstl-1.2.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/api/gax/0.0.6" includes="gax-0.0.6.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/auto/value/auto-value/1.1" includes="auto-value-1.1.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/guava/guava/18.0" includes="guava-18.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/joda-time/joda-time/2.9.9" includes="joda-time-2.9.9.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-all/0.9.0" includes="grpc-all-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-protobuf/0.9.0" includes="grpc-protobuf-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/protobuf/protobuf-java/3.0.0-beta-1" includes="protobuf-java-3.0.0-beta-1.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-netty/0.9.0" includes="grpc-netty-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-codec-http2/4.1.25.Final" includes="netty-codec-http2-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-codec-http/4.1.25.Final" includes="netty-codec-http-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-codec/4.1.25.Final" includes="netty-codec-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-handler/4.1.25.Final" includes="netty-handler-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-buffer/4.1.25.Final" includes="netty-buffer-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-common/4.1.25.Final" includes="netty-common-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-transport/4.1.25.Final" includes="netty-transport-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/netty/netty-resolver/4.1.25.Final" includes="netty-resolver-4.1.25.Final.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/twitter/hpack/0.10.1" includes="hpack-0.10.1.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-auth/0.9.0" includes="grpc-auth-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/auth/google-auth-library-oauth2-http/0.3.0" includes="google-auth-library-oauth2-http-0.3.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/auth/google-auth-library-credentials/0.3.0" includes="google-auth-library-credentials-0.3.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/http-client/google-http-client/1.19.0" includes="google-http-client-1.19.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5" includes="httpclient-4.5.5.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/org/apache/httpcomponents/httpcore/4.4.9" includes="httpcore-4.4.9.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/commons-codec/commons-codec/1.11" includes="commons-codec-1.11.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/http-client/google-http-client-jackson2/1.19.0" includes="google-http-client-jackson2-1.19.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-core/0.9.0" includes="grpc-core-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-okhttp/0.9.0" includes="grpc-okhttp-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/squareup/okhttp/okhttp/2.4.0" includes="okhttp-2.4.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/squareup/okio/okio/1.4.0" includes="okio-1.4.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-stub/0.9.0" includes="grpc-stub-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/io/grpc/grpc-protobuf-nano/0.9.0" includes="grpc-protobuf-nano-0.9.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/protobuf/nano/protobuf-javanano/3.0.0-alpha-4" includes="protobuf-javanano-3.0.0-alpha-4.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/inject/guice/4.0" includes="guice-4.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/javax/inject/javax.inject/1" includes="javax.inject-1.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/aopalliance/aopalliance/1.0" includes="aopalliance-1.0.jar"/>
-            <zipfileset dir="C:/Users/HP/.m2/repository/com/google/code/findbugs/jsr305/3.0.0" includes="jsr305-3.0.0.jar"/>
-        </jar>
+<?xml version="1.0" ?>
+<project name="FlightReservation1" default="war">
+ 
+    <path id="compile.classpath">
+        <fileset dir="WebContent/WEB-INF/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+     
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <mkdir dir="dist" />
     </target>
+     
+    <target name="compile" depends="init" >
+        <javac destdir="build/classes" debug="true" srcdir="src">
+            <classpath refid="compile.classpath"/>
+        </javac>
+    </target>
+     
+    <target name="war" depends="compile">
+        <war destfile="dist/flight.war" webxml="WebContent/WEB-INF/web.xml">
+            <fileset dir="WebContent"/>
+            <lib dir="WebContent/WEB-INF/lib"/>
+            <classes dir="build/classes"/>
+        </war>
+    </target>
+     
+    <target name="clean">
+        <delete dir="dist" />
+        <delete dir="build" />
+    </target>
+     
 </project>
